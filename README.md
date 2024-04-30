@@ -21,26 +21,27 @@ $sh data_const.sh
   
 # 3 Baselin model construction and meta-classifier construction
 seqwin(max_length)=35  
+Note that we do not upload W2V_general_4_128_100_40_1.pt because its memory size is over 25 MB. It is not allowed to upload here.  
 $cd program  
-$sh process.sh
+$sh process.sh  
 
 ## 3-1 Training and testing of the baseline models
 ./program/ml/ml_train_test_45.py  
 ./program/network/train_test_86.py  
 
 ## 3-2 Evaluation of the baseline models
-analysis_622.py
+analysis_622.py  
 
 ## 3-3 Meta-classifier construction
-ml_fusion_642.py
+ml_fusion_642.py  
 
 ## 3-4 output of result
 csv_xlsx_34.py  
 csv_xlsx_37.py  
 
 # References on RNA encodings
-https://ilearn.erc.monash.edu/
+https://ilearn.erc.monash.edu/  
 
 # History
-from pa3/il13_24 in CERVO, mldl environment
+from pa3/il13_24 in CERVO, mldl environment  
 
