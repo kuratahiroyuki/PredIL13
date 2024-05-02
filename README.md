@@ -21,7 +21,8 @@ $sh data_const.sh
   
 # 3 Baselin model construction and meta-classifier construction
 seqwin(max_length)=35  
-Note that we do not upload W2V_general_4_128_100_40_1.pt because its memory size is over 25 MB. It is not allowed to upload here.  
+Note that users need to construct W2V_general_4_128_100_40_1.pt themselves or exclude it.  
+We could not upload W2V_general_4_128_100_40_1.pt because its memory size is over 25 MB.
 $cd program  
 $sh process.sh  
 
