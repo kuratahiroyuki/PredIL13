@@ -921,9 +921,17 @@ def EAAC(fastas, window=5, **kw):
                 count = Counter(sequence[j:j+window])
                 for key in count:
                     count[key] = count[key] / len(sequence[j:j+window])
+                """
                 for aa in AA:
                     code.append(count[aa])
                 for aa in 'X':
-                    code.append(0.0)               
+                    code.append(0.0) 
+                """
+                                    
+                for aa in AA+'X':
+                    if aa == 'X':
+                        code.append(0.0) 
+                    else:  
+                        code.append(count[aa])                                  
         encodings.append(code)
     return encodings
