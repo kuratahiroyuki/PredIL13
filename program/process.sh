@@ -168,7 +168,7 @@ python csv_xlsx_34.py --machine_method_1 "${machine_method_1}" --encode_method_1
 echo ensemble
 meta=LR
 prefix=seq_impdec23_combine
-python ml_fusion_642.py --machine_method_1 "${machine_method_1}" --encode_method_1 "${encode_method_1}" --machine_method_2 "${machine_method_2}" --encode_method_2 "${encode_method_2}" --species ${species} --total_num ${total_num} --meta ${meta} --prefix ${prefix}
+python ml_fusion_642.py --machine_method_1 "${machine_method_1}" --encode_method_1 "${encode_method_1w}" --machine_method_2 "${machine_method_2}" --encode_method_2 "${encode_method_2w}" --species ${species} --total_num ${total_num} --meta ${meta} --prefix ${prefix}
 
 outfile=result_stack_${outsuffix}.xlsx
 python csv_xlsx_37.py --species ${species} --outfile ${outfile} --meta ${meta} --prefix ${prefix}
