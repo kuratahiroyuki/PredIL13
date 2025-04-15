@@ -276,10 +276,10 @@ class train_test_process():
             print("No encoding method")
        
         tra_data_all = pv_data_sets(train_data_sets, encode_method, aa2be_dict, kmer, w2v_model, features, sp_bpe, esm2_model, seq2esm2_dict, nn_embed, seqwin)
-        train_loader = DataLoader(dataset = tra_data_all, batch_size = self.tra_batch_size, shuffle=True)
+        train_loader = DataLoader(dataset = tra_data_all, batch_size = self.tra_batch_size, shuffle=False)
 
         val_data_all = pv_data_sets(val_data_sets, encode_method, aa2be_dict, kmer, w2v_model, features, sp_bpe, esm2_model, seq2esm2_dict, nn_embed, seqwin)
-        val_loader = DataLoader(dataset = val_data_all, batch_size = self.val_batch_size, shuffle=True)
+        val_loader = DataLoader(dataset = val_data_all, batch_size = self.val_batch_size, shuffle=False)
         
         test_data_all = pv_data_sets(test_data_sets, encode_method, aa2be_dict, kmer, w2v_model, features, sp_bpe, esm2_model, seq2esm2_dict, nn_embed, seqwin)
         test_loader = DataLoader(dataset = test_data_all, batch_size = 32, shuffle=False) 
